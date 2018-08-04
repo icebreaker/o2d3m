@@ -1,0 +1,21 @@
+build:
+	make -C build
+
+execute:
+	build/o2d3m --no-monster-attack -o example/base/maps/example.map example/src/example.obj
+
+watch:
+	build/o2d3m --no-monster-attack --watch -o example/base/maps/example.map example/src/example.obj
+
+generate:
+	mkdir -p build
+ifdef QMAKE
+	cd build; $(QMAKE) ..
+else
+	cd build; qmake ..
+endif
+
+clean:
+	rm -rf build
+
+.PHONY: build execute generate clean

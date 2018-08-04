@@ -1,0 +1,6 @@
+build/
+release/
+debug/
+Makefile
+Makefile.*
+.qmake.stash
