@@ -28,8 +28,6 @@
 
 #include <QObject>
 
-namespace od {
-
 class CommandLineRunner : public QObject
 {
 	Q_OBJECT
@@ -52,8 +50,6 @@ private:
 	CommandLineArguments mArgs;
 	bool mWatching;
 };
-
-/* od */ }
 
 #endif
 

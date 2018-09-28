@@ -23,8 +23,7 @@
 }}} */
 #include "version.h"
 #include "command_line_runner.h"
-#include "helper.h"
-#include "brush.h"
+#include "od/helper.h"
 
 #include <QCoreApplication>
 #include <QCommandLineParser>
@@ -37,11 +36,6 @@
 
 #ifndef OD_DEFAULT_MATERIAL
 	#define OD_DEFAULT_MATERIAL "textures/base_floor/squaretile"
-#endif
-
-#if 0
-- https://www.moddb.com/games/doom-iii/tutorials/make-a-door-with-a-keypad
-- write documentation (record small demo video showcasing some of the features)
 #endif
 
 using namespace od;
@@ -116,7 +110,7 @@ int main(int argc, char *argv[])
 	if(args.material.isEmpty())
 		args.material = OD_DEFAULT_MATERIAL;
 	else
-		args.material = od::text::sanitize(args.material);
+		args.material = text::sanitize(args.material);
 
 	CommandLineRunner runner(args);
 	QTimer::singleShot(0, &runner, SLOT(exec()));

@@ -21,10 +21,10 @@
 	OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 	SOFTWARE.
 }}} */
-#include "helper.h"
 #include "command_line_runner.h"
-#include "model.h"
-#include "map.h"
+#include "od/helper.h"
+#include "od/model.h"
+#include "od/map.h"
 
 #include <QCoreApplication>
 #include <QThread>
@@ -34,7 +34,7 @@
 #include <QString>
 #include <QDebug>
 
-namespace od {
+using namespace od;
 
 CommandLineRunner::CommandLineRunner(const CommandLineArguments &args) : QObject(nullptr), mArgs(args), mWatching(true)
 {
@@ -221,7 +221,5 @@ void CommandLineRunner::fileChanged(const QString &filename)
 	qInfo() << "File changed" << filename;
 	process();
 }
-
-/* od */ }
 
 /* vim: set ts=4 sw=4 sts=4 noet: */

@@ -23,25 +23,25 @@ INCLUDEPATH += src
 
 SOURCES += \
 	src/main.cpp \
-	src/model.cpp \
-	src/brush.cpp \
-	src/map.cpp \
-	src/entity.cpp \
-	src/vec3.cpp \
-	src/mesh.cpp \
-	src/plane.cpp \
+	src/od/model.cpp \
+	src/od/brush.cpp \
+	src/od/map.cpp \
+	src/od/entity.cpp \
+	src/od/vec3.cpp \
+	src/od/mesh.cpp \
+	src/od/plane.cpp \
 	src/command_line_runner.cpp
 
 HEADERS += \
-	src/model.h \
-	src/brush.h \
-	src/map.h \
-	src/entity.h \
-	src/vec3.h \
-	src/mesh.h \
-	src/plane.h \
-	src/face.h \
+	src/od/model.h \
+	src/od/brush.h \
+	src/od/map.h \
+	src/od/entity.h \
+	src/od/vec3.h \
+	src/od/mesh.h \
+	src/od/plane.h \
+	src/od/face.h \
+	src/od/helper.h \
 	src/version.h \
 	src/command_line_runner.h
 	src/command_line_arguments.h
-	src/helper.h

@@ -26,8 +26,6 @@
 
 #include <QString>
 
-namespace od {
-
 struct CommandLineArguments
 {
 	bool noWeapons;
@@ -38,8 +36,6 @@ struct CommandLineArguments
 	QString material;
 	QString input;
 };
-
-/* od */ }
 
 #endif
 
